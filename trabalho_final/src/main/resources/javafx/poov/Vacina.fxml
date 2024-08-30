@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="287.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.poov.controller.SecondaryController">
+   <children>
+      <Button fx:id="botaoVacina" layoutX="574.0" layoutY="113.0" mnemonicParsing="false" onAction="#criaVacina" prefHeight="47.0" prefWidth="108.0" text="Ok" />
+      <Button fx:id="botaoCancelar" layoutX="574.0" layoutY="190.0" mnemonicParsing="false" onAction="#cancelaVacina" prefHeight="47.0" prefWidth="108.0" text="Cancelar" />
+      <Label layoutX="56.0" layoutY="82.0" text="Codigo:" />
+      <Label layoutX="60.0" layoutY="111.0" text="Nome:" />
+      <Label layoutX="43.0" layoutY="143.0" text="Descrição:" />
+      <TextField fx:id="inputCodigo" disable="true" layoutX="103.0" layoutY="78.0" prefHeight="25.0" prefWidth="91.0" />
+      <TextField fx:id="inputNome" layoutX="103.0" layoutY="107.0" prefHeight="25.0" prefWidth="166.0" />
+      <TextArea fx:id="inputDescricao" layoutX="103.0" layoutY="136.0" prefHeight="108.0" prefWidth="366.0" />
+      <Label fx:id="labelVacina" layoutX="322.0" layoutY="19.0" text="Vacina">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</AnchorPane>

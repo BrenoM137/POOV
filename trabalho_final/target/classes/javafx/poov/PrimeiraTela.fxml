@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.poov.controller.PrimaryController">
+   <children>
+      <Button fx:id="botaoAplicar" layoutX="362.0" layoutY="520.0" prefHeight="32.0" prefWidth="159.0" onAction="#aplicarVacina" text="Criar Aplicação">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Separator layoutX="464.0" layoutY="35.0" orientation="VERTICAL" prefHeight="461.0" prefWidth="5.0">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.4736842215061188" green="0.46929824352264404" blue="0.46929824352264404" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Separator>
+      <Label layoutX="52.0" layoutY="93.0" text="Código:" />
+      <Label layoutX="56.0" layoutY="121.0" text="Nome:" />
+      <Label layoutX="28.0" layoutY="180.0" text="Nascimento:" />
+      <Label layoutX="32.0" layoutY="214.0" text="A partir de:" />
+      <Label layoutX="69.0" layoutY="243.0" text="Até:" />
+      <Label layoutX="68.0" layoutY="151.0" text="CPF:" />
+      <TextField fx:id="inputCodigoPessoa" layoutX="97.0" layoutY="89.0" prefHeight="25.0" prefWidth="97.0" />
+      <TextField fx:id="inputNomePessoa" layoutX="97.0" layoutY="117.0" prefHeight="25.0" prefWidth="206.0" />
+      <TextField fx:id="inputCPFPessoa" layoutX="97.0" layoutY="147.0" prefHeight="25.0" prefWidth="134.0" />
+      <Label layoutX="179.0" layoutY="35.0" text="Pessoa">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="inputAPartir" layoutX="98.0" layoutY="210.0" />
+      <DatePicker fx:id="inputAte" layoutX="98.0" layoutY="239.0" />
+      <Button fx:id="botaoPesquisaPessoa" layoutX="323.0" layoutY="176.0" mnemonicParsing="false" onAction="#pesquisarPessoa" text="Pesquisar" />
+      <TableView fx:id="pessoaTableView" layoutX="17.0" layoutY="276.0" prefHeight="230.0" prefWidth="428.0">
+        <columns>
+          <TableColumn fx:id="codigoPessoa" prefWidth="65.0" text="Código" />
+          <TableColumn fx:id="nomePessoa" prefWidth="146.0" text="Nome" />
+            <TableColumn fx:id="cpfPessoa" prefWidth="97.0" text="CPF" />
+            <TableColumn fx:id="nascimentoPessoa" prefWidth="103.0" text="Nascimento" />
+        </columns>
+      </TableView>
+      <TableView fx:id="vacinaTableView" layoutX="486.0" layoutY="276.0" prefHeight="230.0" prefWidth="399.0">
+         <columns>
+            <TableColumn fx:id="codigoVacina" prefWidth="75.0" text="Código" />
+            <TableColumn fx:id="nomeVacina" prefWidth="91.0" text="Nome" />
+            <TableColumn fx:id="descricaoVacina" prefWidth="202.0" text="Descrição" />
+         </columns>
+      </TableView>
+      <Label layoutX="505.0" layoutY="93.0" text="Código:" />
+      <Label layoutX="511.0" layoutY="121.0" text="Nome:" />
+      <TextField fx:id="inputCodigoVacina" layoutX="550.0" layoutY="89.0" prefHeight="25.0" prefWidth="97.0" />
+      <TextField fx:id="inputNomeVacina" layoutX="550.0" layoutY="117.0" prefHeight="25.0" prefWidth="206.0" />
+      <Label layoutX="493.0" layoutY="151.0" text="Descrição:" />
+      <Button fx:id="botaoPesquisaVacina" layoutX="781.0" layoutY="176.0" mnemonicParsing="false" onAction="#pesquisarVacina" text="Pesquisar" />
+      <Label layoutX="637.0" layoutY="35.0" text="Vacina">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="botaoNova" layoutX="907.0" layoutY="305.0" mnemonicParsing="false" onAction="#switchToCriar" prefHeight="25.0" prefWidth="66.0" text="Nova" />
+      <Button fx:id="botaoEditar" layoutX="908.0" layoutY="351.0" mnemonicParsing="false" onAction="#switchToEditar" prefHeight="25.0" prefWidth="66.0" text="Editar" />
+      <Button fx:id="botaoRemover" layoutX="908.0" layoutY="395.0" mnemonicParsing="false" onAction="#excluiVacina" prefHeight="25.0" prefWidth="67.0" text="Remover" />
+      <TextArea fx:id="inputDescricaoVacina" layoutX="550.0" layoutY="146.0" prefHeight="104.0" prefWidth="206.0" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" top="10.0" />
+   </padding>
+</AnchorPane>
